@@ -14,5 +14,22 @@ public class Aluno extends Usuario {
     @JoinColumn(name = "fk_turma")
     private Turma turma;
 
+    public Long getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(Long matricula) {
+        this.matricula = matricula;
+    }
+
+    public Turma getTurma() {
+        return turma;
+    }
+
+    public void setTurma(Turma turma) {
+        this.turma = turma;
+    }
+
     // Getters and setters
+    
 }
