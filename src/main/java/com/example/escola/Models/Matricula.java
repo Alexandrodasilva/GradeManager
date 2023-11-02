@@ -1,4 +1,4 @@
-package com.example.escola.Models;
+package com.example.escola.models;
 
 import jakarta.persistence.*;
 
@@ -31,6 +31,8 @@ public class Matricula {
     @Column(name = "nota4")
     private Float nota4;
 
+    // Getters and setters
+    
     public Long getId() {
         return id;
     }
@@ -86,7 +88,5 @@ public class Matricula {
     public void setNota4(Float nota4) {
         this.nota4 = nota4;
     }
-
-    // Getters and setters
     
 }

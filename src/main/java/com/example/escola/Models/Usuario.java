@@ -1,4 +1,4 @@
-package com.example.escola.Models;
+package com.example.escola.models;
 
 import java.util.Date;
 import jakarta.persistence.*;
@@ -26,6 +26,8 @@ public class Usuario {
     @Column(name = "endereco")
     private String endereco;
 
+    // Getters and setters
+    
     public Long getId() {
         return id;
     }
@@ -65,8 +67,6 @@ public class Usuario {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-
-    // Getters and setters
     
 }
 
