@@ -13,14 +13,14 @@ public class Turma {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "nome_turma")
+    @Column(name = "nomeTurma")
     private String nomeTurma;
 
-    @ManyToMany(mappedBy = "turma")
-    private List<Aluno> alunos;
+    // @ManyToMany(mappedBy = "Alunos")
+    // private List<Aluno> alunos;
 
-    @OneToMany(mappedBy = "turma")
-    private List<Disciplina> disciplinas;
+    // @OneToMany(mappedBy = "Disciplinas")
+    // private List<Disciplina> disciplinas;
 
     // Getters and setters
     
@@ -40,20 +40,20 @@ public class Turma {
         this.nomeTurma = nomeTurma;
     }
 
-    public List<Aluno> getAlunos() {
-        return alunos;
-    }
+    // public List<Aluno> getAlunos() {
+    //     return alunos;
+    // }
 
-    public void setAlunos(List<Aluno> alunos) {
-        this.alunos = alunos;
-    }
+    // public void setAlunos(List<Aluno> alunos) {
+    //     this.alunos = alunos;
+    // }
 
-    public List<Disciplina> getDisciplinas() {
-        return disciplinas;
-    }
+    // public List<Disciplina> getDisciplinas() {
+    //     return disciplinas;
+    // }
 
-    public void setDisciplinas(List<Disciplina> disciplinas) {
-        this.disciplinas = disciplinas;
-    }
+    // public void setDisciplinas(List<Disciplina> disciplinas) {
+    //     this.disciplinas = disciplinas;
+    // }
     
 }

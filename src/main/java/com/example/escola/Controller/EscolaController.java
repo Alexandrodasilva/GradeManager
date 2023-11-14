@@ -30,7 +30,7 @@ public class EscolaController {
     @PostMapping
     public ResponseEntity<Turma> savEntity(@Valid Turma turma){
         var t = new Turma();
-        
+        turmaService.save(t);
         return null;
     }
 }
