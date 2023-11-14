@@ -1,4 +1,4 @@
-package com.example.escola.Models;
+package com.example.escola.models;
 
 import java.util.List;
 
@@ -14,6 +14,8 @@ public class Professor extends Usuario {
     )
     private List<Disciplina> disciplinas;
 
+    // Getters and setters
+    
     public List<Disciplina> getDisciplinas() {
         return disciplinas;
     }
@@ -21,7 +23,5 @@ public class Professor extends Usuario {
     public void setDisciplinas(List<Disciplina> disciplinas) {
         this.disciplinas = disciplinas;
     }
-
-    // Getters and setters
     
 }

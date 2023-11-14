@@ -1,0 +1,33 @@
+package com.example.escola.service;
+
+import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
+
+import com.example.escola.models.Turma;
+import com.example.escola.repository.TurmaRepository;
+
+@Service
+public class TurmaService {
+    final private TurmaRepository turmaRepository;
+
+    public TurmaService(TurmaRepository turmaRepository) {
+        this.turmaRepository = turmaRepository;
+    }
+
+    public Turma save(Turma turma) {
+        return turmaRepository.save(turma);
+    }
+
+    public List<Turma> findAll() {
+        return turmaRepository.findAll();
+    }
+
+    public Optional<Turma> findById(Long id) {
+        return turmaRepository.findById(id);
+    }
+
+    public void deleteById(Long id) {
+        turmaRepository.deleteById(id);
+    }
+}

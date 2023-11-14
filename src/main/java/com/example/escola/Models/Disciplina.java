@@ -1,4 +1,4 @@
-package com.example.escola.Models;
+package com.example.escola.models;
 
 import java.util.List;
 
@@ -27,6 +27,8 @@ public class Disciplina {
     @OneToMany(mappedBy = "disciplina")
     private List<Matricula> matriculas;
 
+    // Getters and setters
+    
     public Long getId() {
         return id;
     }
@@ -66,8 +68,6 @@ public class Disciplina {
     public void setMatriculas(List<Matricula> matriculas) {
         this.matriculas = matriculas;
     }
-
-    // Getters and setters
     
 }
 

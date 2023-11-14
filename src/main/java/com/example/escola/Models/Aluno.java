@@ -1,4 +1,4 @@
-package com.example.escola.Models;
+package com.example.escola.models;
 
 import java.util.List;
 
@@ -14,6 +14,8 @@ public class Aluno extends Usuario {
     @JoinColumn(name = "fk_turma")
     private Turma turma;
 
+    // Getters and setters
+    
     public Long getMatricula() {
         return matricula;
     }
@@ -30,6 +32,4 @@ public class Aluno extends Usuario {
         this.turma = turma;
     }
 
-    // Getters and setters
-    
 }
