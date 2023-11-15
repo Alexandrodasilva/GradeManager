@@ -7,6 +7,8 @@ import java.util.Optional;
 import com.example.escola.models.Turma;
 import com.example.escola.repository.TurmaRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class TurmaService {
     final private TurmaRepository turmaRepository;
@@ -14,7 +16,7 @@ public class TurmaService {
     public TurmaService(TurmaRepository turmaRepository) {
         this.turmaRepository = turmaRepository;
     }
-
+    @Transactional
     public Turma save(Turma turma) {
         return turmaRepository.save(turma);
     }
