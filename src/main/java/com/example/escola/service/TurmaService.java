@@ -20,15 +20,15 @@ public class TurmaService {
     public Turma save(Turma turma) {
         return turmaRepository.save(turma);
     }
-
+    @Transactional
     public List<Turma> findAll() {
         return turmaRepository.findAll();
     }
-
+    @Transactional
     public Optional<Turma> findById(Long id) {
         return turmaRepository.findById(id);
     }
-
+    @Transactional
     public void deleteById(Long id) {
         turmaRepository.deleteById(id);
     }
