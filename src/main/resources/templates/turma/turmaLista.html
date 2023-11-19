@@ -20,8 +20,8 @@
             <tbody>
                 <!-- Itera sobre a lista de turmas -->
                 <tr th:each="turma : ${t}">
-                    <td th:text="${turma.getId}"></td>
-                    <td th:text="${turma.getNomeTurma}"></td>
+                    <td th:text="${turma.id}"></td>
+                    <td th:text="${turma.nomeTurma}"></td>
                     <!-- Adicione mais colunas conforme necessário -->
                 </tr>
             </tbody>
