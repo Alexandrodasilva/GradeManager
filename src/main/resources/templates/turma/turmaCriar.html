@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>turma Criar</title>
+    <title>Turma Criar</title>
 </head>
 <body>
-    
+    <div>
+        <h1>Criar turma</h1>
+        <form  th:action="@{/Turma/criar}" method="POST" th:object="${turma}">
+            <label for="nomeTurma">Nome:</label>
+            <input type="text" id="nomeTurma" name="nomeTurma" th:field="*{nomeTurma}">
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
 </body>
 </html>
