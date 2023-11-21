@@ -8,7 +8,7 @@
 <body>
     <div>
         <h1>Criar turma</h1>
-        <form  th:action="@{/Turma/criar}" method="POST" th:object="${turma}">
+        <form  th:action="@{/Turma/criar}" method="post" th:object="${turma}">
             <label for="nomeTurma">Nome:</label>
             <input type="text" id="nomeTurma" name="nomeTurma" th:field="*{nomeTurma}">
             <button type="submit">Salvar</button>
