@@ -27,8 +27,8 @@ public class MatriculaController {
     public ResponseEntity<Matricula> saveEntity(@Valid Matricula matricula){
         Aluno aluno = alunoService.save(matricula.getAluno());
         matricula.setAluno(aluno);
-        matriculaService.save(matricula);
-        return ResponseEntity.status(HttpStatus.Ok).body();
+        Matricula mat = matriculaService.save(matricula);
+        return ResponseEntity.status(HttpStatus.CREATED).body(mat);
     }
 
 }
