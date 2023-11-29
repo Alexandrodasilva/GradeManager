@@ -1,34 +1,35 @@
-package com.example.escola.Controller;
+// package com.example.escola.Controller;
 
-import java.util.List;
+// import java.util.List;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+// import org.springframework.stereotype.Controller;
+// import org.springframework.ui.Model;
+// import org.springframework.web.bind.annotation.*;
 
-import com.example.escola.models.Turma;
-import com.example.escola.service.TurmaService;
-import jakarta.validation.Valid;
+// import com.example.escola.models.defasado.Turma;
+// import com.example.escola.service.defasado.TurmaService;
 
-@RequestMapping("Turma")
-@Controller
-public class TurmaController {
-    final TurmaService turmaService;
+// import jakarta.validation.Valid;
 
-    public TurmaController(TurmaService turmaService) {
-        this.turmaService = turmaService;
-    }
+// @RequestMapping("Turma")
+// @Controller
+// public class TurmaController {
+//     final TurmaService turmaService;
 
-    @PostMapping("/criar")
-    public String saveEntity(@ModelAttribute("turma") @Valid Turma turma) {
-        turmaService.save(turma);
-        return "redirect:/turma/turmaLista";
-    }
+//     public TurmaController(TurmaService turmaService) {
+//         this.turmaService = turmaService;
+//     }
 
-    @GetMapping
-    public String index(final Model model) {
-        List<Turma> t = turmaService.findAll();
-        model.addAttribute("t", t);
-        return "turma/turmaLista";
-    }
-}
+//     @PostMapping("/criar")
+//     public String saveEntity(@ModelAttribute("turma") @Valid Turma turma) {
+//         turmaService.save(turma);
+//         return "redirect:/turma/turmaLista";
+//     }
+
+//     @GetMapping
+//     public String index(final Model model) {
+//         List<Turma> t = turmaService.findAll();
+//         model.addAttribute("t", t);
+//         return "turma/turmaLista";
+//     }
+// }

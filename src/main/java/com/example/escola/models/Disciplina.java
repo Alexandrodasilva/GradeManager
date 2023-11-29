@@ -17,18 +17,13 @@ public class Disciplina {
     private String nomeDisciplina;
 
     @ManyToOne
-    @JoinColumn(name = "fk_turma")
-    private Turma turma;
-
-    @ManyToOne
     @JoinColumn(name = "fk_professor")
     private Professor professor;
-
-    @OneToMany(mappedBy = "disciplina")
-    private List<Matricula> matriculas;
+ 
+    @JoinColumn(name = "aluno")
+    private List<Aluno> aluno;
 
     // Getters and setters
-    
     public Long getId() {
         return id;
     }
@@ -45,14 +40,6 @@ public class Disciplina {
         this.nomeDisciplina = nomeDisciplina;
     }
 
-    public Turma getTurma() {
-        return turma;
-    }
-
-    public void setTurma(Turma turma) {
-        this.turma = turma;
-    }
-
     public Professor getProfessor() {
         return professor;
     }
@@ -60,14 +47,11 @@ public class Disciplina {
     public void setProfessor(Professor professor) {
         this.professor = professor;
     }
-
-    public List<Matricula> getMatriculas() {
-        return matriculas;
+    public List<Aluno> getAluno(){
+        return aluno;
     }
-
-    public void setMatriculas(List<Matricula> matriculas) {
-        this.matriculas = matriculas;
+    public void setAluno(List<Aluno> aluno){
+        this.aluno = aluno;
     }
-    
 }
 

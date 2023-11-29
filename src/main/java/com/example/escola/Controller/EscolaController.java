@@ -1,30 +1,31 @@
-package com.example.escola.Controller;
+// package com.example.escola.Controller;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.http.HttpStatus;
-import com.example.escola.models.Turma;
-import com.example.escola.service.TurmaService;
+// import org.springframework.http.ResponseEntity;
+// import org.springframework.web.bind.annotation.*;
+// import org.springframework.http.HttpStatus;
 
-import jakarta.validation.Valid;
+// import com.example.escola.models.defasado.Turma;
+// import com.example.escola.service.defasado.TurmaService;
 
-@RequestMapping("/schol")
-@RestController
-public class EscolaController {
-    final TurmaService turmaService;
+// import jakarta.validation.Valid;
 
-    // construtor
-    public EscolaController(TurmaService turmaService) {
-        this.turmaService = turmaService;
-    }
+// @RequestMapping("/schol")
+// @RestController
+// public class EscolaController {
+//     final TurmaService turmaService;
 
-    // @GetMapping
-    // public String teste(){
-    // return "teste";
-    // }
+//     // construtor
+//     public EscolaController(TurmaService turmaService) {
+//         this.turmaService = turmaService;
+//     }
 
-    @PostMapping
-    public ResponseEntity<Object> saveEntity(@RequestBody @Valid Turma turma) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(turmaService.save(turma));
-    }
-}
+//     // @GetMapping
+//     // public String teste(){
+//     // return "teste";
+//     // }
+
+//     @PostMapping
+//     public ResponseEntity<Object> saveEntity(@RequestBody @Valid Turma turma) {
+//         return ResponseEntity.status(HttpStatus.CREATED).body(turmaService.save(turma));
+//     }
+// }
